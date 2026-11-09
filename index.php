@@ -5,6 +5,6 @@
   <title>ola</title>
 </head>
 <body>
-    <?php echo "<h1>Olá, brasolia!</h1>" ?>
+    <?php echo "<h1>Olá, brsolia!</h1>" ?>
 </body>
 </html>
