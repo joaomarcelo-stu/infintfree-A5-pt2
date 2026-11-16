@@ -19,7 +19,7 @@ try {
     $stmt->execute();
 
     if ( $linha = $stmt->fetch() ) { // fetch() retorna false se não tiver linhas
-        echo "Login bem-sucedido!". "Bem-Vindo " . $linha['nome'];
+        echo "Login bem-sucedido!". " Bem-Vindo " . $linha['nome'];
     } else {
         echo "CPF ou senha incorretos.";
     }
