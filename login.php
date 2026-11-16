@@ -17,9 +17,9 @@ try {
     $stmt->bindParam(':senha', $senha);
 
     $stmt->execute();
-    
+
     if ( $linha = $stmt->fetch() ) { // fetch() retorna false se não tiver linhas
-        echo "Login bem-sucedido!";
+        echo "Login bem-sucedido!". $linha['nome'];
     } else {
         echo "CPF ou senha incorretos.";
     }
