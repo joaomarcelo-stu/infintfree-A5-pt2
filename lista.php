@@ -1,10 +1,9 @@
 <?php
-$sql = "SELECT * FROM aluno 
-       WHERE cpf = '$cpf' AND senha = '$senha'";
-
-try {
-    $resultado = $conexao->query($sql);
-
-    if ( $linha = $resultado->fetch() ) {
- 	  //restante do código...
+include "conecta.php";
+$sql = "SELECT * FROM aluno";
+$stmt = $conexao->prepare($sql);
+$stmt->execute();
+while ($linha = $stmt->fetch()) {
+    echo "<p><b>Nome: </b>" . $linha['nome'] . " <b>Senha: </b>" . $linha['senha'] . "</p>";
+}
 ?>
